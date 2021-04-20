@@ -1,6 +1,7 @@
 import express, { json, urlencoded } from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import database from './database';
 
 const app = express();
 dotenv.config({ path: './.env' });
@@ -22,6 +23,7 @@ const main = async () => {
   try {
     await app.listen(app.get('port'));
     console.log(`Server running on port ${app.get('port')}`);
+    database();
   } catch (error) {
     throw new Error(`Someting failed ${error}`);
   }
