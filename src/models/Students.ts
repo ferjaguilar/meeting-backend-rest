@@ -6,7 +6,7 @@ const StudentSchema:Schema = new Schema({
   lastname: { type: String, trim: true, required: [true, 'Lastname is required'] },
   code: { type: String, trim: true, required: [true, 'Code is required'] },
   career: { type: String, trim: true, required: [true, 'Career is required'] },
-  status: { type: Boolean, default: false },
+  completed: { type: Boolean, default: false },
 });
 
 export default mongoose.model<IStudents>('Student', StudentSchema);

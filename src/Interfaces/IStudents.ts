@@ -5,5 +5,5 @@ export interface IStudents extends Document {
   lastname: String;
   code: String;
   career: String;
-  status: Boolean;
+  completed: Boolean;
 }
