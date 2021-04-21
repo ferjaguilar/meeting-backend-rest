@@ -15,9 +15,7 @@ app.use(json());
 app.use(urlencoded({ extended: false }));
 
 // Routes
-app.get('/api/testing', (req, res) => {
-  res.send('Api rest Running');
-});
+app.use('/api', require('./routes/Students'));
 
 const main = async () => {
   try {
