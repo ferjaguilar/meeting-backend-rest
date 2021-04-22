@@ -16,6 +16,7 @@ app.use(urlencoded({ extended: false }));
 
 // Routes
 app.use('/api', require('./routes/Students'));
+app.use('/api', require('./routes/Meeting'));
 
 const main = async () => {
   try {
